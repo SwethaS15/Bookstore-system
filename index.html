@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore System</title>
+</head>
+<body>
+    Bookstore System
+</body>
+<script>
+    function CreateAuthor(name,birthYear,nationality){
+      this.name=name;
+      this.birthYear=birthYear;
+      this.nationality=nationality;
+    }
+
+    function Books(tittle,author,genre,price){
+      this.tittle=tittle;
+      this.author=author;
+      this.genre=genre;
+      this.price=price;
+    }
+
+    Books.prototype.getBookInfo = function () {
+      console.log(`Tittle: ${this.tittle}`);
+      console.log(`Author: ${this.author.name}`);
+      console.log(`Genre: ${this.genre}`);
+      console.log(`Price: ${this.price}`);
+      console.log('********************');
+   };
+
+
+    let author1 = new CreateAuthor("APJ.Abdul kalam",1975,"Indian");
+    let author2 = new CreateAuthor("John",1989,"England");
+
+    let book1 =  new Books( "Wings of fire",author1,"motivation",1200);
+    let book2 =  new Books( "Adventure",author2,"Adventure",1000);
+
+     console.log(book1);
+     console.log(book2);
+
+     book1.getBookInfo();
+     book2.getBookInfo();
+  
+</script>
+</html>
